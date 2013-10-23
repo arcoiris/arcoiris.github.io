@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2013-10-23T13:33:58-04:00</updated>
+  <updated>2013-10-23T13:49:47-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A test post]]></title>
+    <link href="http://arcoiris.github.io/blog/2013/10/23/a-test-post/"/>
+    <updated>2013-10-23T13:46:00-04:00</updated>
+    <id>http://arcoiris.github.io/blog/2013/10/23/a-test-post</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>
