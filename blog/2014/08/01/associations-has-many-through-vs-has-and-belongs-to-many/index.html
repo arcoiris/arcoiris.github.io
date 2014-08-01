@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Typing Is Good for You</title>
+  <title>Associations: Has_many :through vs. Has_and_belongs_to_many - Typing Is Good for You</title>
   <meta name="author" content="Deborah">
 
   
-  <meta name="description" content="Blog Archive 2014 Associations: Has_many :through vs. Has_and_belongs_to_many
-Aug 01 2014 posted in academy,, associations, rails,, ruby,, tealeaf &hellip;">
+  <meta name="description" content="In Rails, there are two ways to express many-to-many associations. The two forms of expressing a many-to-many association are as follows: (given two &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Aug 01 2014 posted in academy,, associations, rails,, ruby,, tealeaf &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://arcoiris.github.io/blog/archives">
+  <link rel="canonical" href="http://arcoiris.github.io/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Typing Is Good for You" type="application/atom+xml">
@@ -58,49 +57,131 @@ Aug 01 2014 posted in academy,, associations, rails,, ruby,, tealeaf &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Associations: Has_many :through vs. Has_and_belongs_to_many</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-01T14:54:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>In Rails, there are two ways to express many-to-many associations. The two forms of expressing a many-to-many association are as follows: (given two models, Post and Category)</p>
 
-  
-  <h2>2014</h2>
+<p>models/categories.rb</p>
 
-<article>
-  
-<h1><a href="/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/">Associations: Has_many :through vs. Has_and_belongs_to_many</a></h1>
-<time datetime="2014-08-01T14:54:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>01</span> <span class='year'>2014</span></time>
+<pre><code>    has_and_belongs_to_many :posts
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/academy/'>academy,</a>, <a class='category' href='/blog/categories/associations/'>associations</a>, <a class='category' href='/blog/categories/rails/'>rails,</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/tealeaf/'>tealeaf</a></span>
-</footer>
+<p>models/posts.rb</p>
 
+<pre><code>    has_and_belongs_to_many :categories
+</code></pre>
 
-</article>
+<hr />
 
+<p>(join table)</p>
 
+<pre><code>class CreatePostCategories &lt; ActiveRecord::Migration 
+  def change
+    create_table :post_categories do |t|
+      t.integer :post_id 
+      t.integer :category_id 
+      t.timestamps
+    end
+  end
+end
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/2014/07/31/title/">Title</a></h1>
-<time datetime="2014-07-31T18:03:00-04:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2014</span></time>
+<p>models/post.rb</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/css/'>CSS</a></span>
-</footer>
+<pre><code>has_many :post_categories
+has_many :categories, through: :post_categories
+</code></pre>
 
+<p>models/categories.rb</p>
 
-</article>
+<pre><code>has_many :post_categories 
+has_many :posts, through: :post_categories
+</code></pre>
 
+<h3>has_and_belongs_to_many</h3>
+
+<p>When you use has_and_belongs_to_many, you don&rsquo;t create an explicit join table, as rails creates an implicit table for you at the database level. It&rsquo;s a matter of plug in and go.</p>
+
+<h3>has_many :through + join_table</h3>
+
+<p>When using has_many :through in order to express a many-to-many relationship, you must explicitly create a join table. In the above example, PostCategories is the join table. You can add any attributes to the join table. Since you can extend the join table, it is best practice to use has_many :through + join table.</p>
+
+<p><strong>Conclusion:</strong> has_many :through is to be used the majority of the time, based on its extensibility.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Deborah</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-01T14:54:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/academy/'>academy,</a>, <a class='category' href='/blog/categories/associations/'>associations</a>, <a class='category' href='/blog/categories/rails/'>rails,</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/tealeaf/'>tealeaf</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://arcoiris.github.io/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/" data-via="" data-counturl="http://arcoiris.github.io/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/07/31/title/" title="Previous Post: title">&laquo; title</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

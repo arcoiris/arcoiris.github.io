@@ -9,7 +9,7 @@
   <meta name="author" content="Deborah">
 
   
-  <meta name="description" content=" HELLO! ">
+  <meta name="description" content="In Rails, there are two ways to express many-to-many associations. The two forms of expressing a many-to-many association are as follows: (given two &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,6 +58,89 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/">Associations: Has_many :through vs. Has_and_belongs_to_many</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-01T14:54:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In Rails, there are two ways to express many-to-many associations. The two forms of expressing a many-to-many association are as follows: (given two models, Post and Category)</p>
+
+<p>models/categories.rb</p>
+
+<pre><code>    has_and_belongs_to_many :posts
+</code></pre>
+
+<p>models/posts.rb</p>
+
+<pre><code>    has_and_belongs_to_many :categories
+</code></pre>
+
+<hr />
+
+<p>(join table)</p>
+
+<pre><code>class CreatePostCategories &lt; ActiveRecord::Migration 
+  def change
+    create_table :post_categories do |t|
+      t.integer :post_id 
+      t.integer :category_id 
+      t.timestamps
+    end
+  end
+end
+</code></pre>
+
+<p>models/post.rb</p>
+
+<pre><code>has_many :post_categories
+has_many :categories, through: :post_categories
+</code></pre>
+
+<p>models/categories.rb</p>
+
+<pre><code>has_many :post_categories 
+has_many :posts, through: :post_categories
+</code></pre>
+
+<h3>has_and_belongs_to_many</h3>
+
+<p>When you use has_and_belongs_to_many, you don&rsquo;t create an explicit join table, as rails creates an implicit table for you at the database level. It&rsquo;s a matter of plug in and go.</p>
+
+<h3>has_many :through + join_table</h3>
+
+<p>When using has_many :through in order to express a many-to-many relationship, you must explicitly create a join table. In the above example, PostCategories is the join table. You can add any attributes to the join table. Since you can extend the join table, it is best practice to use has_many :through + join table.</p>
+
+<p><strong>Conclusion:</strong> has_many :through is to be used the majority of the time, based on its extensibility.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -117,6 +200,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/">Associations: Has_many :through vs. Has_and_belongs_to_many</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/07/31/title/">Title</a>

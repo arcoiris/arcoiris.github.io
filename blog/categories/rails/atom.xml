@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Typing Is Good for You]]></title>
-  <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Rails, | Typing Is Good for You]]></title>
+  <link href="http://arcoiris.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
   <updated>2014-08-01T15:47:18-04:00</updated>
   <id>http://arcoiris.github.io/</id>
@@ -66,18 +66,6 @@ has_many :posts, through: :post_categories
 <p>When using has_many :through in order to express a many-to-many relationship, you must explicitly create a join table. In the above example, PostCategories is the join table. You can add any attributes to the join table. Since you can extend the join table, it is best practice to use has_many :through + join table.</p>
 
 <p><strong>Conclusion:</strong> has_many :through is to be used the majority of the time, based on its extensibility.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Title]]></title>
-    <link href="http://arcoiris.github.io/blog/2014/07/31/title/"/>
-    <updated>2014-07-31T18:03:00-04:00</updated>
-    <id>http://arcoiris.github.io/blog/2014/07/31/title</id>
-    <content type="html"><![CDATA[<p>
-    HELLO!
-</p>
-
 ]]></content>
   </entry>
   
