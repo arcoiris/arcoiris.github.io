@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Associations | Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/blog/categories/associations/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-01T16:00:03-04:00</updated>
+  <updated>2014-08-01T16:01:24-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -67,7 +67,7 @@ has_many :posts, through: :post_categories
 
 <p><strong>Conclusion:</strong> has_many :through is to be used the majority of the time, based on its extensibility.</p>
 
-<p><strong>Further Reading?</strong> (Rails associations api doc)[<a href="http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html">http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html</a>]</p>
+<p><strong>Further Reading?</strong> <a href="http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html">Rails associations api doc</a></p>
 ]]></content>
   </entry>
   
