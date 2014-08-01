@@ -4,7 +4,7 @@
   <title><![CDATA[Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-01T15:47:18-04:00</updated>
+  <updated>2014-08-01T16:00:03-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -14,9 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Associations: Has_many :through vs. Has_and_belongs_to_many]]></title>
+    <title type="html"><![CDATA[Associations: Has_many :through vs Has_and_belongs_to_many]]></title>
     <link href="http://arcoiris.github.io/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/"/>
-    <updated>2014-08-01T14:54:00-04:00</updated>
+    <updated>2014-08-01T15:52:00-04:00</updated>
     <id>http://arcoiris.github.io/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many</id>
     <content type="html"><![CDATA[<p>In Rails, there are two ways to express many-to-many associations. The two forms of expressing a many-to-many association are as follows: (given two models, Post and Category)</p>
 
@@ -66,6 +66,8 @@ has_many :posts, through: :post_categories
 <p>When using has_many :through in order to express a many-to-many relationship, you must explicitly create a join table. In the above example, PostCategories is the join table. You can add any attributes to the join table. Since you can extend the join table, it is best practice to use has_many :through + join table.</p>
 
 <p><strong>Conclusion:</strong> has_many :through is to be used the majority of the time, based on its extensibility.</p>
+
+<p><strong>Further Reading?</strong> (Rails associations api doc)[<a href="http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html">http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html</a>]</p>
 ]]></content>
   </entry>
   

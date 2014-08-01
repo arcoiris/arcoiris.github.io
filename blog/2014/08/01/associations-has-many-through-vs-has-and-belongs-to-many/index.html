@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Associations: Has_many :through vs. Has_and_belongs_to_many - Typing Is Good for You</title>
+  <title>Associations: Has_many :through vs Has_and_belongs_to_many - Typing Is Good for You</title>
   <meta name="author" content="Deborah">
 
   
@@ -61,7 +61,7 @@
   
   <header>
     
-      <h1 class="entry-title">Associations: Has_many :through vs. Has_and_belongs_to_many</h1>
+      <h1 class="entry-title">Associations: Has_many :through vs Has_and_belongs_to_many</h1>
     
     
       <p class="meta">
@@ -77,7 +77,7 @@
   
 
 
-<time datetime="2014-08-01T14:54:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
+<time datetime="2014-08-01T15:52:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
         
       </p>
     
@@ -132,6 +132,8 @@ has_many :posts, through: :post_categories
 <p>When using has_many :through in order to express a many-to-many relationship, you must explicitly create a join table. In the above example, PostCategories is the join table. You can add any attributes to the join table. Since you can extend the join table, it is best practice to use has_many :through + join table.</p>
 
 <p><strong>Conclusion:</strong> has_many :through is to be used the majority of the time, based on its extensibility.</p>
+
+<p><strong>Further Reading?</strong> (Rails associations api doc)[<a href="http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html">http://api.rubyonrails.org/v4.1.1/classes/ActiveRecord/Associations/ClassMethods.html</a>]</p>
 </div>
 
 
@@ -154,12 +156,12 @@ has_many :posts, through: :post_categories
   
 
 
-<time datetime="2014-08-01T14:54:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
+<time datetime="2014-08-01T15:52:00-04:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/academy/'>academy,</a>, <a class='category' href='/blog/categories/associations/'>associations</a>, <a class='category' href='/blog/categories/rails/'>rails,</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/tealeaf/'>tealeaf</a>
+    <a class='category' href='/blog/categories/associations/'>associations</a>, <a class='category' href='/blog/categories/databases/'>databases</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/tealeaf/'>tealeaf</a>
   
 </span>
 
@@ -201,7 +203,7 @@ has_many :posts, through: :post_categories
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/">Associations: Has_many :through vs. Has_and_belongs_to_many</a>
+        <a href="/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/">Associations: Has_many :through vs Has_and_belongs_to_many</a>
       </li>
     
       <li class="post">
