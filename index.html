@@ -91,26 +91,24 @@
 
 <p>Active Record is a way of accessing data in a database. Active Record is a pattern that can be implemented outside of the Rails framework. I didn&rsquo;t understand that.  example: <a href="http://www.phpactiverecord.org/">PHP active record</a></p>
 
-<pre><code>adsfasdfa
-</code></pre>
-
 <p>Active Record maps:</p>
 
-<ol>
-<li><p>Classes to tables:</p>
+<p><strong>Classes to tables</strong></p>
 
-<p> class post &lt; ActiveRecord::Base
- end</p></li>
-<li><p>Object to rows of data within that table</p>
+<p>  class post &lt; ActiveRecord::Base
+  end</p>
 
-<p> #<Post id: 1, title: "Ruby is so awesome", url: "ruby-doc.org", description: "A description of some sort", user_id: 1, created_at: "2014-08-03 21:43:49", updated_at: "2014-08-03 21:58:14"></p></li>
-<li><p>Getters/setters to columns in that table</p>
+<p><strong>Object to rows of data within that table</strong></p>
 
-<p> post = Post.first
- post.title = &ldquo;Ruby Documentation&rdquo; # setter
- post.title # getter</p></li>
-</ol>
+<pre><code>#&lt;Post id: 1, title: "Ruby is so awesome", url: "ruby-doc.org", description: "A description of some sort", user_id: 1, created_at: "2014-08-03 21:43:49", updated_at: "2014-08-03 21:58:14"&gt; 
+</code></pre>
 
+<p><strong>Getters/setters to columns in that table</strong></p>
+
+<pre><code>post = Post.first
+post.title = "Ruby Documentation" # setter
+post.title # getter
+</code></pre>
 
 <p>Further reading/related docs: <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a></p>
 </div>
