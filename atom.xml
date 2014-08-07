@@ -4,7 +4,7 @@
   <title><![CDATA[Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-07T16:29:45-04:00</updated>
+  <updated>2014-08-07T16:30:32-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -42,7 +42,7 @@ post.title = "Ruby Documentation" # setter
 post.title # getter
 </code></pre>
 
-<p>Further reading/related docs: <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a></p>
+<p><strong>Further reading?/related docs:</strong> <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a></p>
 ]]></content>
   </entry>
   
