@@ -4,7 +4,7 @@
   <title><![CDATA[Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-07T16:19:34-04:00</updated>
+  <updated>2014-08-07T16:21:46-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Oh, Active Record Is Not Only a Rails Pattern]]></title>
+    <title type="html"><![CDATA[Oh, ActiveRecord Is Not Exclusive to Rails"]]></title>
     <link href="http://arcoiris.github.io/blog/2014/08/02/oh-active-record-is-not-only-a-rails-pattern/"/>
     <updated>2014-08-02T15:02:00-04:00</updated>
     <id>http://arcoiris.github.io/blog/2014/08/02/oh-active-record-is-not-only-a-rails-pattern</id>
@@ -39,7 +39,7 @@
 </ol>
 
 
-<p>Further reading: <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a> (haha, 1.1 paragraph describes my &ldquo;discovery&rdquo;)</p>
+<p>Further reading/related docs: <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a></p>
 ]]></content>
   </entry>
   
