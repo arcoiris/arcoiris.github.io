@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | Typing Is Good for You]]></title>
+  <link href="http://arcoiris.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://arcoiris.github.io/"/>
+  <updated>2014-08-07T16:29:45-04:00</updated>
+  <id>http://arcoiris.github.io/</id>
+  <author>
+    <name><![CDATA[Deborah]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Oh, ActiveRecord Is Not Exclusive to Rails]]></title>
+    <link href="http://arcoiris.github.io/blog/2014/08/02/oh-active-record-is-not-only-a-rails-pattern/"/>
+    <updated>2014-08-02T15:02:00-04:00</updated>
+    <id>http://arcoiris.github.io/blog/2014/08/02/oh-active-record-is-not-only-a-rails-pattern</id>
+    <content type="html"><![CDATA[<p>Recently on a tealeaf academy quiz, I didn&rsquo;t know how to sensibly: &ldquo;At a high level, describe the ActiveRecord pattern.&rdquo;</p>
+
+<p>Active Record is a way of accessing data in a database. Active Record is a pattern that can be implemented outside of the Rails framework. I didn&rsquo;t understand that.  example: <a href="http://www.phpactiverecord.org/">PHP active record</a></p>
+
+<p>Active Record maps:</p>
+
+<p><strong>Classes to tables</strong></p>
+
+<pre><code>class Post &lt; ActiveRecord::Base 
+end
+</code></pre>
+
+<p><strong>Object to rows of data within that table</strong></p>
+
+<pre><code>#&lt;Post id: 1, title: "Ruby is so awesome", url: "ruby-doc.org", description: "A description of some sort", user_id: 1, created_at: "2014-08-03 21:43:49", updated_at: "2014-08-03 21:58:14"&gt; 
+</code></pre>
+
+<p><strong>Getters/setters to columns in that table</strong></p>
+
+<pre><code>post = Post.first
+post.title = "Ruby Documentation" # setter
+post.title # getter
+</code></pre>
+
+<p>Further reading/related docs: <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a></p>
+]]></content>
+  </entry>
+  
+</feed>
