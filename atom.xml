@@ -4,7 +4,7 @@
   <title><![CDATA[Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-07T16:24:22-04:00</updated>
+  <updated>2014-08-07T16:25:53-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>Recently on a tealeaf academy quiz, I didn&rsquo;t know how to sensibly: &ldquo;At a high level, describe the ActiveRecord pattern.&rdquo;</p>
 
 <p>Active Record is a way of accessing data in a database. Active Record is a pattern that can be implemented outside of the Rails framework. I didn&rsquo;t understand that.  example: <a href="http://www.phpactiverecord.org/">PHP active record</a></p>
+
+<pre><code>adsfasdfa
+</code></pre>
 
 <p>Active Record maps:</p>
 
