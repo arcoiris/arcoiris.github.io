@@ -9,7 +9,7 @@
   <meta name="author" content="Deborah">
 
   
-  <meta name="description" content="In Rails, there are two ways to express many-to-many associations. The two forms of expressing a many-to-many association are as follows: (given two &hellip;">
+  <meta name="description" content="Recently on a tealeaf academy quiz, I didn&rsquo;t know how to sensibly: &ldquo;At a high level, describe the ActiveRecord pattern.&rdquo; Active &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,6 +58,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/02/oh-active-record-is-not-only-a-rails-pattern/">Oh, Active Record Is Not Only a Rails Pattern</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-02T15:02:00-04:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently on a tealeaf academy quiz, I didn&rsquo;t know how to sensibly: &ldquo;At a high level, describe the ActiveRecord pattern.&rdquo;</p>
+
+<p>Active Record is a way of accessing data in a database. Active Record is a pattern that can be implemented outside of the Rails framework. I didn&rsquo;t understand that.  example: <a href="http://www.phpactiverecord.org/">PHP active record</a></p>
+
+<p>Active Record maps:</p>
+
+<ol>
+<li><p>Classes to tables:</p>
+
+<pre><code> class post &lt; ActiveRecord::Base 
+ end
+</code></pre></li>
+<li><p>Object to rows of data within that table
+     #<Post id: 1, title: "Ruby is so awesome", url: "ruby-doc.org", description: "A description of some sort", user_id: 1, created_at: "2014-08-03 21:43:49", updated_at: "2014-08-03 21:58:14"></p></li>
+<li><p>Getters/setters to columns in that table
+     post = Post.first
+     post.title = &ldquo;Ruby Documentation&rdquo; # setter
+     post.title # getter</p></li>
+</ol>
+
+
+<p>Further reading: <a href="http://guides.rubyonrails.org/active_record_basics.html">active record rails docs</a> (haha, 1.1 paragraph describes my &ldquo;discovery&rdquo;)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -163,6 +220,10 @@ has_many :posts, through: :post_categories
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/02/oh-active-record-is-not-only-a-rails-pattern/">Oh, Active Record Is Not Only a Rails Pattern</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/01/associations-has-many-through-vs-has-and-belongs-to-many/">Associations: Has_many :through vs Has_and_belongs_to_many</a>
