@@ -4,7 +4,7 @@
   <title><![CDATA[Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-07T16:21:46-04:00</updated>
+  <updated>2014-08-07T16:22:47-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -27,15 +27,16 @@
 <ol>
 <li><p>Classes to tables:</p>
 
-<pre><code> class post &lt; ActiveRecord::Base 
- end
-</code></pre></li>
-<li><p>Object to rows of data within that table
-     #<Post id: 1, title: "Ruby is so awesome", url: "ruby-doc.org", description: "A description of some sort", user_id: 1, created_at: "2014-08-03 21:43:49", updated_at: "2014-08-03 21:58:14"></p></li>
-<li><p>Getters/setters to columns in that table
-     post = Post.first
-     post.title = &ldquo;Ruby Documentation&rdquo; # setter
-     post.title # getter</p></li>
+<p> class post &lt; ActiveRecord::Base
+ end</p></li>
+<li><p>Object to rows of data within that table</p>
+
+<p> #<Post id: 1, title: "Ruby is so awesome", url: "ruby-doc.org", description: "A description of some sort", user_id: 1, created_at: "2014-08-03 21:43:49", updated_at: "2014-08-03 21:58:14"></p></li>
+<li><p>Getters/setters to columns in that table</p>
+
+<p> post = Post.first
+ post.title = &ldquo;Ruby Documentation&rdquo; # setter
+ post.title # getter</p></li>
 </ol>
 
 
