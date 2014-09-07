@@ -4,7 +4,7 @@
   <title><![CDATA[Typing Is Good for You]]></title>
   <link href="http://arcoiris.github.io/atom.xml" rel="self"/>
   <link href="http://arcoiris.github.io/"/>
-  <updated>2014-08-07T16:30:32-04:00</updated>
+  <updated>2014-09-07T16:05:56-04:00</updated>
   <id>http://arcoiris.github.io/</id>
   <author>
     <name><![CDATA[Deborah]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Overview of Ideas Learned at Tealeaf]]></title>
+    <link href="http://arcoiris.github.io/blog/2014/09/07/overview-of-ideas-learned-at-tealeaf/"/>
+    <updated>2014-09-07T15:17:00-04:00</updated>
+    <id>http://arcoiris.github.io/blog/2014/09/07/overview-of-ideas-learned-at-tealeaf</id>
+    <content type="html"><![CDATA[<p>So, I&rsquo;m finishing up with the rapid rails prototyping course at Tealeaf. I&rsquo;d like to touch on a few more of the things that I learned during my time in the course.</p>
+
+<ul>
+<li>Cache busting</li>
+<li>Salts (not of the bath type)</li>
+<li>Memoization</li>
+<li>Slugs</li>
+</ul>
+
+
+<h3>Cache busting</h3>
+
+<p>In order to speed up a user&rsquo;s experience of web application and to save computing resources, Rails implements a technique known as cache busing in order to prevent files being unnecessarily loaded from a web server.</p>
+
+<p>&ldquo;Cache busting works by adding a fingerprint to certain files and encouraging cahces everywhere (CDNs, ISPs, and web browsers) to keep copies of files. When the files&#8217; content is updated, the fingerpring changes. The change in fingerprint will cause remote clients to request a new copy of the content.&rdquo;</p>
+
+<p>e.g. public/assets/application=58dacfa161231mla</p>
+
+<p>(source: rails guides)</p>
+
+<h3>Salts</h3>
+
+<p>We got cha salts ova hea. We got cha passwords ova hea. Well, we actually ain&rsquo;t got cha passwords. Best practice when it comes to storing passwords is to input plaintext passwords into a cryptographic one-way hash with some randomly generated input, salt.</p>
+
+<p>Salting does not make it significantly more difficult to crack individual password when rainbow tables are being used to crack. But, it makes does make it significantly more difficult (computationally expensive) to crack an entire database of passwords.</p>
+
+<h3>Memoization</h3>
+
+<p>Memoization is the storing of the results of a method call in order to avoid repeated calls to that method. It optimizes performance by preventing the repeated call of a method if the results of that method have not changed since the last storing of the result. Thus, a program uses less of the computer&rsquo;s resources.</p>
+
+<h3>Slugs</h3>
+
+<p>Semantic urls that improve usuability of a site, as the urls become meaningful to users.
+Example:</p>
+
+<pre><code>http://foonetwork.com/users/1
+to
+http://foonetwork.com/users/jose-rodriguez
+</code></pre>
+
+<p>Not only do slugs facilitate a better user experience, but they also prevent prying eyes from easily learning the primary keys of the data in your application&rsquo;s database.</p>
+
+<p>I&rsquo;ll be back with my notes from the first few chapters of Sandi Metz&rsquo;s &ldquo;Practical Object-Oriented Design in Ruby: An Agile Primer&rdquo;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stuff I'm Learning]]></title>
+    <link href="http://arcoiris.github.io/blog/2014/08/18/stuff-im-learning/"/>
+    <updated>2014-08-18T22:43:00-04:00</updated>
+    <id>http://arcoiris.github.io/blog/2014/08/18/stuff-im-learning</id>
+    <content type="html"><![CDATA[<p>Time complexity: the amount of time taken by an algorithm to run as a function of the length of the string representing the input.</p>
+
+<p>Time complexity is commonly estimated by counting the number of elementary operations performed by the algorithm, where an elementary operation takes a fixed amount of time to perform.</p>
+
+<p>Worst-case time complexity measures the resources an algorithm requires in the worst-case. It gives an upper bound on the resources required by the algorithm.</p>
+
+<p>Worst case time compexity is used to compare the efficiency of two algorithms? What is efficiency defined as?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Oh, ActiveRecord Is Not Exclusive to Rails]]></title>
